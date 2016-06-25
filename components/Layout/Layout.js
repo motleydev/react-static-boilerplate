@@ -8,12 +8,12 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Header from './Header';
-import Navigation from './Navigation';
-import s from './Layout.css';
+ import React from 'react';
+ import Header from './Header';
+ import Navigation from './Navigation';
+ import s from './Layout.css';
 
-class Layout extends React.Component {
+ class Layout extends React.Component {
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.refs.root);
@@ -26,16 +26,17 @@ class Layout extends React.Component {
   render() {
     return (
       <div className="mdl-layout mdl-js-layout" ref="root">
-        <div className="mdl-layout__inner-container">
-          <Header>
-            <span className="mdl-layout-title">React Static Boilerplate</span>
-            <div className="mdl-layout-spacer"></div>
-            <Navigation />
-          </Header>
-          <main {...this.props} className={s.content} />
-        </div>
+      <div className="mdl-layout__inner-container">
+      <Header>
+      <span className="mdl-layout-title">React Static Boilerplate</span>
+      <div className="mdl-layout-spacer"></div>
+      <Navigation />
+      </Header>
+      <main {...this.props} className={s.content} />
+      <div className={s.targetProblem} />
       </div>
-    );
+      </div>
+      );
   }
 }
 
